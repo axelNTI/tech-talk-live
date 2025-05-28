@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-      	uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -28,4 +28,3 @@ jobs:
 
       - name: Deploy to Pages
         uses: actions/deploy-pages@v4
-        
