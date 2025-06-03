@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - "main"
+  schedule:
+    cron: "0 0 * * *"
+
 
 permissions:
   id-token: write
@@ -13,10 +16,12 @@ jobs:
   format:
     runs-on: ubuntu-latest
     name: Check formatting
+    
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
